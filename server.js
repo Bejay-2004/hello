@@ -4,7 +4,6 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
-const mysql = require('mysql2');
 const session = require('express-session');
 const path = require('path');
 const app = express();
