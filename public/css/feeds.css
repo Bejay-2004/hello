@@ -1,0 +1,59 @@
+/* Style for user-id */
+.user-id {
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 10px;
+    display: block; /* Ensures it appears above the category */
+}
+
+/* Main Profile Container */
+.posts-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Posts Title */
+.posts-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+/* Post Item */
+.post-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column; /* Stack the user-id above the category */
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.hashtag {
+
+    font-weight: bold;
+    color: #1561ae;
+}
+
+.post-author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    margin-bottom: 15px;
+    color: #333;
+}

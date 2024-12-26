@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('img/mia_bg.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1px; /* Add spacing between letters */
+}
+
+
+.header-section {
+    width: 100%;
+    padding: 20px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.21);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: 10px;
+    border: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* Centering the header content */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Adjust as needed */
+}
+
+/* Basic styling and alignment for the logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling and animation for the logo image */
+.logo-image {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling and fade-in animation for the text */
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fffdfd;
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Hover effect */
+.logo:hover .logo-image {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Keyframes for text fade-in */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.nav-section {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    margin-top: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center; 
+  gap: 5px; 
+  padding: 20px; 
+}
+
+.nav-tabs a {
+  background: rgba(0, 0, 0, 0.679);
+  color: #fff; 
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; 
+  border-radius: 5px; 
+}
+
+.nav-tabs a:hover {
+  background: #555; 
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.active {
+	background: var(--grey);
+	position: relative;
+}
+.active::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	top: -40px;
+	right: 0;
+	box-shadow: 20px 20px 0 var(--grey);
+	z-index: -1;
+}
+
+.active::after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	bottom: -40px;
+	right: 0;
+	box-shadow: 20px -20px 0 var(--grey);
+	z-index: -1;
+}
+
+.Scroll-Section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-height: calc(107vh - 200px);
+    overflow-y: auto; 
+    padding: 10px;
+    margin-top: 2px;
+    background-color: rgba(0, 0, 0, 0.48);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: 20px;
+    border: #000;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    width: 100%; /* Full width */
+    padding: 2em 1em; /* Padding around footer content */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    margin-top: 2em; /* Space above the footer */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+    animation-delay: 0.5s; /* Delay for better visibility */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+.footer-links,
+.social-links {
+    margin-bottom: 1em;
+}
+
+/* Link styles */
+.footer-links a,
+.social-links a {
+    color: #FFCC00; /* Yellow link color */
+    text-decoration: none;
+    margin: 0 15px; /* Increased spacing between links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover */
+}
+
+/* Hover effect for links */
+.footer-links a:hover,
+.social-links a:hover {
+    color: #ffb300; /* Darker yellow on hover */
+    transform: scale(1.1); /* Slightly enlarge link on hover */
+}
+
+/* Footer paragraph styles */
+footer p {
+    margin-top: 1em; /* Space above the paragraph */
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #f0f0f0; /* Light gray color for the footer text */
+}

@@ -1,0 +1,75 @@
+/* General Statistics Container Styling */
+.statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Chart Container Styling */
+.chart-container {
+    position: relative; /* Position the container for pseudo-element layering */
+    flex: 1 1 45%;
+    min-width: 280px;
+    max-width: 600px;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.7); /* Add semi-transparent background for better visibility of content */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensure the content is above the background */
+}
+
+.chart-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/mia_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(20px); /* Apply blur to the background image */
+    border-radius: 12px; /* Match the border-radius of the container */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+
+.chart-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings within Chart Containers */
+.chart-container h3 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* Canvas Styling for Chart Responsiveness */
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 500px;
+}
+
+/* General Text Styling */
+h2 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}

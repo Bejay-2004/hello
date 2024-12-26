@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Layout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/thought.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-section">
+       <header class="header">
+           <div class="logo">
+               <img src="css/img/LOGO (2).png" alt="Logo" class="logo-image">
+               <span class="logo-text">UEP PULSE</span>
+           </div>
+       </header>
+        
+        <div class="nav-section">
+            <nav class="nav-tabs">
+                <a href="login.html"><i class="fas fa-home"></i> Home</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a href="thought.html"><i class="fas fa-th-list"></i> Categories</a>
+                <a href="notification.html"><i class="fas fa-bell"></i> Notification</a>
+                <a href="aboutUs.html"><i class="fas fa-info-circle"></i> About</a>
+            </nav>
+    
+            <div class="Scroll-Section">
+<main>
+    <form id="createPostForm">
+        <div class="dropdown">
+            <select name="category" class="category-select" required>
+                <option value="" disabled selected>Select Category...</option>
+                <option value="academic-concerns">Academic Concerns</option>
+                <option value="social-events">Social Events</option>
+                <option value="campus-facilities">Campus Facilities</option>
+                <option value="suggestions-for-improvement">Suggestions for Improvement</option>
+                <option value="other">Other</option>
+            </select>                     
+        </div>
+        <div class="textarea-container">
+            <textarea name="content" class="post-textarea" placeholder="Share your thoughts, concerns, and ideas.&#10;Ex. #Classrooms" required></textarea>
+            <div class="note">max of 1000 words only</div>
+        </div>
+        <div class="post-button">
+            <button type="submit" class="post-btn">POST</button>
+            <p class="notification" style="color: red; display: none;"></p>
+        </div>
+    </form>
+    
+</main>
+
+
+
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Use</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com/uep">Facebook</a>
+                <a href="https://twitter.com/uep">Twitter</a>
+                <a href="https://instagram.com/uep">Instagram</a>
+            </div>
+        <p>University Town, Catarman Northern Samar<br>uepnsofficial@gmail.com</p>
+    </footer>
+    
+        <script src="js/notification.js"></script>
+        <script src="js/thought.js"></script>
+</body>
+</html>

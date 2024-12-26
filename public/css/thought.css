@@ -1,0 +1,89 @@
+/* Style for the form container */
+#createPostForm {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown container */
+.dropdown {
+    margin-bottom: 15px;
+}
+
+/* Dropdown select */
+.category-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.category-select:focus {
+    border-color: #007bff;
+}
+
+/* Textarea container */
+.textarea-container {
+    margin-bottom: 15px;
+}
+
+/* Textarea */
+.post-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.post-textarea:focus {
+    border-color: #007bff;
+}
+
+/* Note below the textarea */
+.note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Submit button */
+.post-button {
+    text-align: center;
+}
+
+.post-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Notification message */
+.notification {
+    margin-top: 10px;
+    font-size: 14px;
+}

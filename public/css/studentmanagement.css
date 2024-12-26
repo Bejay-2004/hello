@@ -1,0 +1,184 @@
+/* Container and table styling */
+.user-management-container {
+    position: relative; /* Establish positioning for pseudo-element layering */
+    width: 98%;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 3%;
+    padding: 20px; /* Added padding for inner spacing */
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent background for better readability */
+    border-radius: 12px;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.user-management-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/mia_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px); /* Apply blur to the background image */
+    border-radius: 12px; /* Match the container’s border-radius */
+    z-index: -1; /* Keep the background layer behind the content */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.filters input[type="text"],
+.filters select,
+.filters input[type="date"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus,
+.filters input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+.user-table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.user-table td {
+    background-color: #ffffff4e;
+    color: white;
+}
+
+.user-table tr:hover td {
+    background-color: white;
+    color: black;
+} 
+
+/* Button styling */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.view-profile {
+    background-color: #080cff;
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+}
+
+button.deactivate {
+    background-color: #e8670b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters input[type="text"],
+    .filters select,
+    .filters input[type="date"] {
+        width: 90%;
+    }
+    
+    .user-table th, .user-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Style for both buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Style for the Edit button */
+.edit-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Style for the Delete button */
+.delete-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* Add space between buttons */
+td button {
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Optional: Add some spacing between buttons in a table cell */
+td {
+    padding: 10px;
+}
+

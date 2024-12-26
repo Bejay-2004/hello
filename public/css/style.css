@@ -1,0 +1,581 @@
+.hero {
+    text-align: center;
+    padding: 4em 2em;
+    color: #fff;
+    border-radius: 8px;
+    margin: 5em auto; /* 2em top and bottom, auto left and right for centering */
+    background-image: url('img/mia_bg.jpg'); /* Replace with your image path */
+    background-size: 120%; /* Slightly larger than cover for spacing */
+    background-position: center; /* Centers the image */
+    position: relative; /* Allows positioning of the text if needed */
+}
+
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #ffffff; /* White color for text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increased spacing between letters */
+}
+
+.highlight {
+    color: #FFCC00; /* Yellow color */
+    font-weight: bold; /* Makes the text bold */
+    padding: 0.2em 0.4em; /* Optional: adds some padding around the text */
+    border-radius: 4px; /* Optional: rounds the corners of the background */
+    display: inline-block; /* Ensures it behaves like a block for padding and margin */
+    margin-top: 0.5em; /* Adds space above the highlighted text */
+}
+
+@keyframes blinkZoom {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+        transform: scale(1.1); /* Slightly zoomed in */
+    }
+}
+
+.blinking {
+    animation: blinkZoom 1s infinite; /* 1s duration, infinite repetition */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.hero .btn {
+    margin: 1em;
+    padding: 12px 25px;
+    background: rgb(14, 14, 101); /* Original button background color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* No underline on links */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions for background and transform */
+}
+
+.hero .btn:hover {
+    background-color: #ffb300; /* Change background color on hover */
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+
+/* Purpose Section */
+/* Purpose Section */
+.features {
+    text-align: center;
+    padding: 4em 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(71, 86, 117, 0.05);
+}
+
+.features h2 {
+    font-family: "Brush Script MT";
+    font-size: 3.5em;
+    color: #ffffff;
+    display: inline-block; /* Allows the background to wrap around the text */
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    padding: 2em;
+}
+
+/* Full background image with blur overlay for each grid item */
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    padding: 1.5em;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Blurred background image overlay with black gradient */
+.feature-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('img/mia_bg.jpg') center/cover no-repeat;
+    filter: blur(2.5px); /* Adjust blur level as needed */
+    z-index: 1;
+    opacity: 0.8; /* Optional: reduce opacity for a subtle blur */
+}
+
+
+/* Dark overlay directly on .feature-item for extra contrast */
+.feature-item {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Text elements inside feature-item */
+.feature-item h3, .feature-item p {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-item h3 {
+    color: rgb(240, 233, 233);
+    font-size: 25px;
+}
+
+.feature-item p {
+    color: rgb(236, 224, 224);
+}
+
+/* Hover effect for grid items */
+.feature-item:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(242, 255, 171, 0.8);
+}
+
+/* Make other items smaller when one is hovered */
+.feature-item:hover ~ .feature-item {
+    transform: scale(0.9);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-item {
+        height: 200px;
+    }
+}
+
+
+/* Post Section */
+.about {
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.about h2 {
+    font-family: "Brush Script MT";
+    font-size: 3.5em;
+    color: #ffffff;
+    display: inline-block; /* Allows the background to wrap around the text */
+    margin-bottom: 2%;
+}
+
+.about h3 {
+    margin-bottom: 1em;
+    color: #ffffff;
+}
+
+.about p {
+    margin-bottom: 1em;
+    color: #e7dada;
+}
+
+
+.about {
+    text-align: center; /* Center the title */
+    margin: 2em 0; /* Add some margin around the section */
+}
+
+.about {
+    text-align: center; /* Center the title */
+    margin: 2em 0; /* Add some margin around the section */
+}
+
+.about {
+    text-align: center; /* Center the title */
+    margin: 2em 0; /* Add some margin around the section */
+}
+
+.about {
+    text-align: center; /* Center the title */
+    margin: 2em 0; /* Add some margin around the section */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for a single-row layout */
+    gap: 2em; /* Space between grid items */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    justify-items: center; /* Center items in grid cells */
+}
+.about-grid li {
+    display: flex; /* Use Flexbox for layout within each item */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    border-radius: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Added background transition */
+    filter: blur(0); /* No blur by default */
+}
+
+/* Change here for zoom and lighten effect */
+.about-grid li:hover {
+    transform: scale(1.05); /* Scale up the item to create a zoom effect */
+    background-color: rgba(6, 35, 57, 0.8); /* Lighter background color on hover */
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5), /* Outer white glow */
+                0px 0px 15px rgba(0, 255, 255, 0.5); /* Inner blue glow */
+    filter: blur(0); /* Clear hover item */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+
+/* Blur effect for non-hovered items */
+.about-grid li:not(:hover) {
+    filter: blur(2px); /* Blur the non-hovered items */
+}
+
+/* Increased image size */
+.about-image {
+    width: 120px; /* Set image width */
+    height: 120px; /* Set image height */
+    margin-bottom: 1em; /* Space below the image */
+    border-radius: 4px; /* Optional: round the image corners */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Add this hover effect for images */
+.about-grid li:hover .about-image {
+    transform: scale(1.2); /* Scale up the image to create a larger zoom effect */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Keep 1 column on smaller screens */
+    }
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+    }
+
+    .about-image {
+        width: 100px; /* Adjust image size for smaller screens */
+        height: 100px; /* Adjust image size for smaller screens */
+    }
+}
+
+
+/* How it works section */
+.how-it-works {
+    text-align: center; /* Center the text */
+    padding: 4em 2em; /* Add padding */
+    margin: 2em 0; /* Add margin */
+}
+
+.how-it-works h2 {
+    font-family: "Brush Script MT";
+    font-size: 3.5em;
+    color: #ffffff;
+    display: inline-block; /* Allows the background to wrap around the text */
+}
+
+
+.steps {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.steps li {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    color: #000;
+    border-radius: 8px; /* Rounded corners for items */
+    padding: 1em; /* Padding inside list items */
+    margin: 1em 0; /* Spacing between items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.steps li:hover {
+    transform: scale(1.1); /* Enlarge the hovered item */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.steps li:hover ~ li {
+    transform: scale(0.9); /* Slightly shrink the non-hovered items */
+}
+
+
+
+/*======Images Section=====*/
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .card-wrapper h2 {
+    font-family: "Brush Script MT";
+    font-size: 3.5em;
+      margin-bottom: 0.5em;
+      color: #ffffff; 
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px; 
+  }
+  
+  .card-list .card-item {
+    list-style: none;
+    width: 30%;
+    margin: 2px;
+  }
+
+  .card-list .card-item .card-link {
+    display: block;
+    background: url('img/mia_bg.jpg') center/cover no-repeat;
+    padding: 18px;
+    user-select: none;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+  .card-list .card-item .card-link:active {
+    cursor: grabbing;
+  }
+  .card-list .card-item .card-link:hover {
+    border-color: #5372F0;
+  }
+  .card-list .card-link .card-image {
+    width: 100%;
+    border: #ffffff;
+    border-top: 5px solid #ffffff;    /* Top border weight */
+    border-right: 2px solid #ffffff;  /* Right border weight */
+    border-bottom: 5px solid #ffffff; /* Bottom border weight */
+    border-left: 2px solid #ffffff;   /* Left border weight */
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .card-list .card-link .badge {
+    display: flex;
+    color: #5372F0;
+    width: fit-content;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background: #DDE4FF;
+    margin: 16px auto 18px; /* Centers element horizontally */
+}
+
+  .card-list .card-link .badge-designer {
+    color: #B22485;
+    background: #F7DFF5;
+  }
+  .card-list .card-link .badge-marketer {
+    color: #B25A2B;
+    background: #FFE3D2;
+  }
+  .card-list .card-link .badge-gamer {
+    color: #205C20;
+    background: #D6F8D6;
+  }
+  .card-list .card-link .badge-editor {
+    color: #856404;
+    background: #fff3cd;
+  }
+  .card-list .card-link .card-title {
+    color: #000;
+    font-size: 1.19rem;
+    font-weight: 600;
+  }
+  .card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372F0;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #5372F0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+  }
+  .card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372F0;
+  }
+  .card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+  }
+  .card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  .card-wrapper .swiper-slide-button {
+    color: #5372F0;
+    margin-top: -35px;
+  }
+  
+  /* Responsive media query code for small screens */
+  @media (max-width: 768px) {
+    .card-wrapper {
+      margin: 0 10px 25px;
+    }
+    .card-wrapper .swiper-slide-button {
+      display: none;
+    }
+  }
+  
+
+/* Feedback section */
+.feedback-form {
+    margin: 4rem auto; /* Center the form with margin above and below */
+    text-align: left;
+    width: 100%; /* Make it flexible with screen size */
+    max-width: 1500px; /* Set a max width for the form */
+    border-radius: 8px;
+    padding: 2.5rem; /* Maintain larger padding inside form */
+}
+
+.feedback-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* More gap between options */
+    width: 100%; /* Ensure the feedback options take full width */
+    font-size: 1.2rem; /* Adjust this value as needed to make the text larger */
+    background-image: url('img/mia_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.5rem; /* Add padding to the container */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
+
+.feedback-options label {
+    color: #ffffff;
+    font-size: 1rem;
+    width: 100%; /* Ensure labels take full width */
+}
+
+.feedback-options input[type="radio"] {
+    margin-right: 0.5rem; /* Space between radio button and label */
+}
+
+.feedback-options input[type="text"] {
+    width: 100%; /* Make sure the input takes full width of its container */
+    padding: 1rem; /* Larger padding in text input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.word-limit {
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-align: right;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(14, 14, 101); /* Original button background color */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    margin: 1.5% auto 0; /* Centers the button horizontally */
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: auto;
+}
+
+/* Optional: Clear floats if necessary */
+.feedback-form::after {
+    content: "";
+    display: table;
+    clear: both; /* Clear floats */
+}
+
+.submit-btn:hover {
+    background-color: #ffb300;
+}
+
+.tooltip {
+    visibility: hidden; /* Hide tooltip by default */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute; /* Position it relative to the label */
+    z-index: 1;
+    margin-left: 5px; /* Space between label and tooltip */
+    white-space: nowrap; /* Prevent line break */
+}
+
+label:hover .tooltip {
+    visibility: visible; /* Show tooltip on hover */
+}
+
+
+/* Footer */
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Moves the footer slightly up */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+
+
+
+
+/* Body and Layout Adjustments */
+html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    flex: 1;
+}
+
+
+
+
+
+
+

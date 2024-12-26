@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/suggestion.css">
+
+    <title>UEP Pulse Admin</title>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="css/img/LOGO (2).png" alt="Logo" class="logo">
+            <span class="text">UEP Pulse Admin</span>
+        </a>
+        
+        <ul class="side-menu top">
+            <li>
+                <a href="admin.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Admin Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="suggestion.html">
+                    <i class='bx bxs-shopping-bag-alt'></i>
+                    <span class="text">Suggestion Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="statistic.html">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">Statistics and Insights</span>
+                </a>
+            </li>
+            <li>
+                <a href="studentmanagement.html">
+                    <i class='bx bxs-message-dots'></i>
+                    <span class="text">User Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="team.html">
+                    <i class='bx bxs-group'></i>
+                    <span class="text">Team</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="#" class="nav-link">Suggestion Management</a>
+
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+
+            <a href="#" class="notification">
+                <i class='bx bxs-bell'></i>
+                <span class="num">8</span>
+            </a>
+
+            <a href="#" class="profile">
+                <img src="css/img/universitylogo.png">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->5
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Suggestion Management</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+
+                        <li>
+                            <a class="active" href="#">Suggestions</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="suggestion">
+                <!-- Category Management Section -->
+                <div class="category-management">
+                    <ul id="categoryList">
+                        <!-- Categories will be listed here -->
+                    </ul>
+                </div>
+            
+                <!-- Suggestion Container -->
+                <div class="suggestion_container">
+                    <!-- Search and Filter Section -->
+                    <div class="filters">
+                        <input type="text" id="search" placeholder="Search suggestions...">
+            
+                        <!-- Updated Dropdown for Category -->
+                        <div class="dropdown">
+                            <select class="category-select">
+                                <option value="" disabled selected>Select Category...</option>
+                                <option value="academic-concerns">Academic Concerns</option>
+                                <option value="social-events">Social Events</option>
+                                <option value="campus-facilities">Campus Facilities</option>
+                                <option value="suggestions-for-improvement">Suggestions for Improvement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+            
+                        <!-- Status Filter -->
+                        <select id="statusFilter">
+                            <option value="">Status</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Reviewed">Reviewed</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                        <input type="date" id="dateFilter">
+                        <button onclick="applyFilters()">Apply Filters</button>
+                    </div>
+                    
+                    <!-- Suggestion Table -->
+                    <table id="suggestionTable">
+                        <thead>
+                            <tr>
+                                <th>UserID</th>
+                                <th>Category</th>
+                                <th>Content</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="suggestionTableBody">
+                            <!-- Rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+	<script>
+        // Load categories from localStorage
+        function loadCategories() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const categories = JSON.parse(localStorage.getItem('categories')) || [];
+
+            // Clear current categories in the filter
+            categoryFilter.innerHTML = '<option value="">Category</option>';
+
+            // Add categories from localStorage to the dropdown
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categoryFilter.appendChild(option);
+            });
+        }
+
+        // Initial load
+        loadCategories();
+    </script>
+    <script src="js/suggestion.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

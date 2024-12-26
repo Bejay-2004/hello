@@ -1,0 +1,226 @@
+/* Profile Section */
+.main-content {
+    flex: 1;
+}
+
+.profile-section {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    background-image: url('img/mia_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto; /* Centers the section horizontally */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateX(1%);
+}
+
+/* Profile Image */
+.profile-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Rounded image */
+    object-fit: cover;
+    margin-right: 20px;
+    border: 4px solid #ffffff; /* Blue border for emphasis */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+}
+
+/* Profile Info */
+.profile-info {
+    color: #f0f0f0; /* Light text color for readability */
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info p strong {
+    color: #ffffff; /* Highlight labels in blue */
+    font-weight: bold;
+}
+
+/* Main Profile Container */
+.posts-container {
+    align-content: center;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Posts Title */
+.posts-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+/* Post Item */
+.post-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hashtag {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 10px;
+}
+
+.post-author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Comment Section */
+.comment-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.comment-send-btn {
+    border: none;
+    background: none;
+    color: #007bff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.comment-send-btn::before {
+    content: '➤';
+}
+
+.comment-send-btn:hover {
+    color: #0056b3;
+}
+
+/* Post Icons */
+.post-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.post-icons i {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Parent container */
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Ensure the height adjusts based on content */
+}
+
+/* Icon container */
+.icon-container {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 15px; /* Add space between the icons */
+    margin-top: 10px; /* Optional, adjust the margin if needed */
+    width: 100%; /* Ensure it takes up the full width of the parent container */
+}
+
+
+/* Optionally, style the text next to icons */
+.like-count, .comment-count, .save-count {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Like Icon */
+.like-icon {
+    font-size: 1.5em;  /* Adjust size as needed */
+    color: black;      /* Default color */
+}
+
+.like-icon:hover {
+    color: #007bff;    /* Blue on hover */
+}
+
+/* Comment Icon */
+.comment-icon {
+    font-size: 1.5em;
+    color: black;
+}
+
+.comment-icon:hover {
+    color: #007bff;    /* Blue on hover */
+}
+
+/* Save Icon */
+.save-icon {
+    font-size: 1.5em;
+    color: black;
+}
+
+.save-icon:hover {
+    color: #007bff;    /* Blue on hover */
+}
+
+
+.post-icons i.active {
+    color: #007BFF; /* Change to your desired color when active */
+    transform: scale(1.2); /* Optional: Slightly enlarge the icon when active */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+.black-icon {
+    color: #000000; /* Black color */
+}
+
+.post-icons i, .post-icons span {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.post-icons {
+    display: flex; /* Display icons and counts in a row */
+    align-items: center; /* Center vertically */
+    gap: 0; /* Remove any gap between items */
+}
+
+.post-icons i {
+    vertical-align: middle; /* Align icons with text */
+}
+
+.post-icons span {
+    margin-left: 0; /* Remove margin between icon and count */
+}
+

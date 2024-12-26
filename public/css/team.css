@@ -1,0 +1,137 @@
+/* Team Section Styling */
+.team-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* Container for all team members */
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.team-member {
+    background-image: url('img/mia_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    backdrop-filter: blur(20px); /* Modern browsers */
+    -webkit-backdrop-filter: blur(20px); /* Safari */
+    background: rgba(255, 255, 255, 0.116); /* Fallback for unsupported browsers */
+}
+
+.team-member:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.member-details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.member-details .role {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.member-details .description {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons Section */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-media a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Edit and Remove button styles */
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-remove {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+/* Add New Member Button */
+.btn-add-team {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-add-team:hover {
+    background-color: #0056b3;
+}
